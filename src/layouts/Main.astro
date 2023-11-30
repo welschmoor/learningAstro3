@@ -1,0 +1,79 @@
+---
+import Navbar from "../components/Navbar.astro";
+import { ViewTransitions } from "astro:transitions";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="description astro test kekek" />
+    <title>Astro</title>
+
+    <ViewTransitions />
+  </head>
+  <body class="bg-[hsl(33,16%,87%)] mx-2">
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
+
+<!-- <style is:global>
+  .bga {
+    background-color: hsl(33, 16%, 87%);
+  }
+  .f {
+    display: flex;
+  }
+  .g {
+    display: grid;
+  }
+
+  .gc2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: 640px) {
+    .xs\:gc2 {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (min-width: 768px) {
+    .sm\:gc2 {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .gc3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (min-width: 768px) {
+    .sm\:gc3 {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .g1 {
+    gap: 0.25rem;
+  }
+  .g2 {
+    gap: 0.5rem;
+  }
+  .wf {
+    width: 100%;
+  }
+  .r7 {
+    border-radius: 7px;
+  }
+  .lsn {
+    list-style: none;
+  }
+  .underline-none {
+    text-decoration: none;
+  }
+  .text-black {
+    color: black;
+  }
+</style> -->
