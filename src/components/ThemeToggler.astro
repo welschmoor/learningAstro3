@@ -2,7 +2,22 @@
 
 ---
 
-<div class="cursor-pointer flex gap-2">
-  <p class="hidden">Dark</p>
-  <p>Light</p>
-</div>
+<script>
+  let hiddenClass = "hidden"
+  const toggleEl = document.querySelector("button")
+  const darkEl = document.querySelector(".dark")
+  const lightEl = document.querySelector(".light")
+  console.log("lightEl::", lightEl)
+
+  if (toggleEl && darkEl && lightEl) {
+    toggleEl.addEventListener("click", () => {
+      darkEl.classList.toggle(hiddenClass)
+      lightEl.classList.toggle(hiddenClass)
+    })
+  }
+</script>
+
+<button class="flex cursor-pointer gap-2">
+  <p class="dark hidden">Dark</p>
+  <p class="light">Light</p>
+</button>
