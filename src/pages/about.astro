@@ -1,7 +1,18 @@
 ---
-import Main from "../layouts/Main.astro";
+import Main from "../layouts/Main.astro"
+
+const randomInt = Math.ceil(Math.random() * 5)
+console.log("randomInt:::", randomInt)
+
+const resp = await fetch(
+  `https://random-data-api.com/api/v2/users?size=${randomInt}&is_xml=true`
+)
+const person = await resp.json()
+console.log("person:::", person)
 ---
 
 <Main>
-  <h1>About page</h1>
+  <h1>About page {randomInt}</h1>
+  <p>Hi, my name is {person.first_name} {person.last_name}</p>
+  <img src={person.avatar} width="400" height="auto" />
 </Main>
