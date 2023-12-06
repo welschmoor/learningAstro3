@@ -1,0 +1,100 @@
+<script>
+	let count = 0;
+	export let title;
+	function increment() {
+		count += 1;
+	}
+</script>
+
+<h2 >I am red</h2>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<div>{title}</div>
+<button on:click={increment}>
+	Clicked {count}
+	{count === 1 ? 'time' : 'times'}
+</button>

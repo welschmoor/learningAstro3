@@ -1,0 +1,20 @@
+---
+import SvelteCounter from "../components/SvelteCounter.svelte"
+import Main from "../layouts/Main.astro"
+
+const randomIndex = Math.ceil(Math.random() * 36)
+console.log("randomIndex", randomIndex)
+const res = await fetch(`http://localhost:4040/v1/listings?page_size=100`, {
+  cache: "no-store",
+})
+const resJson = await res.json()
+---
+
+<Main>
+  <h1>Svelte page {randomIndex}</h1>
+  <p>Hi, my name is {resJson.listings[randomIndex].title}</p>
+  <SvelteCounter
+    client:only="svelte"
+    title={resJson.listings[randomIndex].title}
+  />
+</Main>

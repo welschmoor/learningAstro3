@@ -1,9 +1,18 @@
 ---
-import Main from "../layouts/Main.astro";
+import Main from "../layouts/Main.astro"
+
+const randomIndex = Math.ceil(Math.random() * 4999)
+console.log("randomIndex", randomIndex)
+const res = await fetch(
+  `https://jsonplaceholder.typicode.com/photos/${randomIndex}`,
+  { cache: "no-store" }
+)
+const resJson = await res.json()
+
 ---
 
 <Main>
-  <h1>Browse Rooms</h1>
+  <h1>Browse Rooms {resJson.id}</h1>
   <p>Browse Rooms etc</p>
   <p>
     Browse Rooms awdaw dwa Lorem ipsum dolor sit, amet consectetur adipisicing

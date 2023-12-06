@@ -1,0 +1,19 @@
+---
+import SvelteCounter from "../components/SvelteCounter.svelte"
+import Main from "../layouts/Main.astro"
+
+const randomIndex = Math.ceil(Math.random() * 4999)
+console.log("randomIndex", randomIndex)
+const res = await fetch(
+  `https://jsonplaceholder.typicode.com/photos`,
+  { cache: "no-store" }
+)
+const resJson = await res.json()
+resJson[0]
+---
+
+<Main>
+  <h1>Svelte page {randomIndex}</h1>
+  <p>Hi, my name is </p>
+  <SvelteCounter client:only="svelte" />
+</Main>

@@ -1,10 +1,9 @@
 ---
-import ThemeToggler from "./ThemeToggler.astro";
-
+import ThemeToggler from "./ThemeToggler.astro"
 ---
 
 <nav class="flex justify-between">
-  <ul class="list-none flex gap-2">
+  <ul class="flex list-none gap-2">
     <li>
       <a href="/" class="underline-none text-black"> Home</a>
     </li>
@@ -13,6 +12,12 @@ import ThemeToggler from "./ThemeToggler.astro";
     </li>
     <li>
       <a href="/about" class="underline-none text-black"> About</a>
+    </li>
+    <li>
+      <a href="/solid" class="underline-none text-black"> Solid</a>
+    </li>
+    <li>
+      <a href="/svelte" class="underline-none text-black"> Svelte</a>
     </li>
   </ul>
   <ThemeToggler />

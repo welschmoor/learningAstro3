@@ -1,0 +1,19 @@
+---
+import SolidCounter from "../components/SolidCounter"
+import Main from "../layouts/Main.astro"
+
+const randomIndex = Math.ceil(Math.random() * 4999)
+console.log("randomIndex", randomIndex)
+const res = await fetch(
+  `https://jsonplaceholder.typicode.com/photos`,
+  { cache: "no-store" }
+)
+const resJson = await res.json()
+resJson[0]
+---
+
+<Main>
+  <h1>Solid page {randomIndex}</h1>
+  <p>Hi, my name is </p>
+  <SolidCounter client:load />
+</Main>

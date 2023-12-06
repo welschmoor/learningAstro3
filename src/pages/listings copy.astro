@@ -1,0 +1,17 @@
+---
+import SolidCounter from "../components/SolidCounter"
+import Main from "../layouts/Main.astro"
+
+const randomIndex = Math.ceil(Math.random() * 36)
+console.log("randomIndex", randomIndex)
+const res = await fetch(`http://localhost:4040/v1/listings?page_size=100`, {
+  cache: "no-store",
+})
+const resJson = await res.json()
+---
+
+<Main>
+  <h1>Solid page {randomIndex}</h1>
+  <p>Hi, my name is {resJson.listings[randomIndex].title}</p>
+  <SolidCounter client:load />
+</Main>
